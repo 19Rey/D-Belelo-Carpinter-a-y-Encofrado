@@ -1,0 +1,143 @@
+/* Tipografía */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(to right, #007BFF, #00BFFF);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+nav {
+    background-color: #007BFF;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    background-color: #0056b3;
+    transition: background-color 0.3s ease;
+}
+
+section.servicios {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+section.servicios h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #007BFF;
+}
+
+.servicio {
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+    margin: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.servicio img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.contacto {
+    background-color: #f1f1f1;
+    padding: 40px;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transition: background-color 0.3s ease;
+}
+
+.redes-sociales {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.redes-sociales h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #007BFF;
+}
+
+.iconos a {
+    color: #333;
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.iconos a:hover {
+    color: #007BFF;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    width: 100%;
+}
