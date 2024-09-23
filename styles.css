@@ -30,14 +30,14 @@ nav {
     background-color: #007BFF;
     display: flex;
     justify-content: center;
-    padding: 15px;
+    padding: 10px;
     flex-wrap: wrap; /* Asegura que los enlaces se ajusten en pantallas pequeñas */
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px; /* Ajuste para pantallas pequeñas */
+    padding: 10px;
     font-size: 1rem; /* Tamaño reducido para móviles */
 }
 
@@ -53,22 +53,23 @@ section.servicios {
 
 section.servicios h2 {
     margin-bottom: 30px;
-    font-size: 2rem; /* Ajuste de tamaño para móviles */
+    font-size: 2.5rem; /* Ajuste de tamaño para móviles */
     color: #007BFF;
 }
 
 .servicio {
-    display: inline-block;
-    width: 100%; /* Ajuste para móviles */
-    padding: 20px;
-    margin: 10px;
+    display: block; /* Cambio a bloque para que se apilen en móviles */
+    width: 90%; /* Reducción de ancho para garantizar el margen */
+    margin: 10px auto; /* Centrado automático */
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra ligera para profundidad */
 }
 
 .servicio img {
     width: 100%;
+    height: auto; /* Mantiene la proporción */
     border-radius: 5px;
 }
 
@@ -79,18 +80,18 @@ section.servicios h2 {
 }
 
 form {
-    max-width: 100%; /* Ajuste para pantallas pequeñas */
-    margin: 0 auto;
+    max-width: 90%; /* Ajuste para pantallas pequeñas */
+    margin: 0 auto; /* Centrado automático */
     background-color: white;
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 input, textarea {
     width: 100%;
-    padding: 15px;
-    margin-bottom: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
@@ -98,11 +99,11 @@ input, textarea {
 
 button {
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     background-color: #007BFF;
     color: white;
     border: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -119,7 +120,7 @@ button:hover {
 
 .redes-sociales h2 {
     margin-bottom: 20px;
-    font-size: 1.8rem; /* Ajuste de tamaño para móviles */
+    font-size: 2rem; /* Ajuste de tamaño para móviles */
     color: #007BFF;
 }
 
@@ -143,34 +144,18 @@ footer {
     width: 100%;
 }
 
-/* Consultas de medios para diferentes tamaños de pantalla */
-@media (max-width: 768px) {
+/* Consultas de medios para dispositivos móviles específicamente */
+@media (max-width: 600px) {
     header h1 {
-        font-size: 2.5rem; /* Tamaño más pequeño para la cabecera en tablets y móviles */
+        font-size: 2.5rem;
+    }
+
+    header p, .contacto p {
+        font-size: 1rem;
     }
 
     nav a {
-        font-size: 1rem; /* Tamaño de fuente más pequeño para la navegación */
-        padding: 10px; /* Menos padding para enlaces */
-    }
-
-    section.servicios h2,
-    .redes-sociales h2 {
-        font-size: 1.6rem; /* Tamaño de fuente reducido para secciones */
-    }
-
-    .servicio {
-        width: 100%; /* Columnas completas en dispositivos más pequeños */
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 40px 10px; /* Menos padding en la cabecera para dispositivos muy pequeños */
-    }
-
-    header p,
-    .contacto p {
-        font-size: 1rem; /* Tamaño de texto reducido */
+        font-size: 0.9rem;
+        padding: 8px;
     }
 }
