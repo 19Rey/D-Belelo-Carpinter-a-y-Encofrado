@@ -50,17 +50,21 @@ section.servicios {
 }
 
 .servicio {
-    display: inline-block;
-    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto; /* Asegura que el margen sea automático */
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     max-width: 300px; /* Limitar el ancho máximo de los servicios */
-    margin: 10px auto; /* Centrar los servicios */
 }
 
 .servicio img {
+    display: block;
+    margin: 0 auto;
     width: 100%;
     height: auto;
     border-radius: 5px;
