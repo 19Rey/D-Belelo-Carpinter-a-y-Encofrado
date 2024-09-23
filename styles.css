@@ -5,6 +5,7 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Evitar el desplazamiento horizontal */
 }
 
 header {
@@ -55,6 +56,8 @@ section.servicios {
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 300px; /* Limitar el ancho máximo de los servicios */
+    margin: 10px auto; /* Centrar los servicios */
 }
 
 .servicio img {
@@ -151,8 +154,9 @@ footer {
     }
 
     .servicio {
-        width: 100%; /* Ajusta el ancho para que ocupe toda la pantalla */
+        width: 90%; /* Ajusta el ancho para que ocupe casi toda la pantalla */
         padding: 15px;
+        margin: 10px auto; /* Centrar los servicios */
     }
 }
 
