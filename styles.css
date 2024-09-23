@@ -9,7 +9,6 @@ body {
     padding: 0;
     overflow-x: hidden; /* Evitar el desplazamiento horizontal */
     min-height: 100vh; /* Asegura que el contenido siempre ocupe al menos el 100% de la altura de la pantalla */
-    display: inline block;
     flex-direction: column;
 }
 
