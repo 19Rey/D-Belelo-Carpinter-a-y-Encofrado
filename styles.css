@@ -11,17 +11,15 @@ header {
     background: linear-gradient(to right, #007BFF, #00BFFF);
     color: white;
     text-align: center;
-    padding: 60px 20px;
+    padding: 40px 20px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 3rem; /* Ajuste de tamaño para móviles */
     font-weight: 700;
 }
 
 header p {
-    font-size: 1.2rem;
     margin-top: 10px;
     font-weight: 300;
 }
@@ -31,14 +29,13 @@ nav {
     display: flex;
     justify-content: center;
     padding: 10px;
-    flex-wrap: wrap; /* Asegura que los enlaces se ajusten en pantallas pequeñas */
+    flex-wrap: wrap;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     padding: 10px;
-    font-size: 1rem; /* Tamaño reducido para móviles */
 }
 
 nav a:hover {
@@ -51,25 +48,18 @@ section.servicios {
     padding: 40px 20px;
 }
 
-section.servicios h2 {
-    margin-bottom: 30px;
-    font-size: 2.5rem; /* Ajuste de tamaño para móviles */
-    color: #007BFF;
-}
-
 .servicio {
-    display: block; /* Cambio a bloque para que se apilen en móviles */
-    width: 90%; /* Reducción de ancho para garantizar el margen */
-    margin: 10px auto; /* Centrado automático */
+    display: inline-block;
+    margin: 10px;
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra ligera para profundidad */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .servicio img {
     width: 100%;
-    height: auto; /* Mantiene la proporción */
+    height: auto;
     border-radius: 5px;
 }
 
@@ -80,8 +70,8 @@ section.servicios h2 {
 }
 
 form {
-    max-width: 90%; /* Ajuste para pantallas pequeñas */
-    margin: 0 auto; /* Centrado automático */
+    max-width: 90%;
+    margin: 0 auto;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -120,13 +110,12 @@ button:hover {
 
 .redes-sociales h2 {
     margin-bottom: 20px;
-    font-size: 2rem; /* Ajuste de tamaño para móviles */
-    color: #007BFF;
+    font-size: 2rem;
 }
 
 .iconos a {
     color: #333;
-    font-size: 1.8rem; /* Tamaño ajustado para móviles */
+    font-size: 1.8rem;
     margin: 0 15px;
     transition: color 0.3s ease;
 }
@@ -144,8 +133,10 @@ footer {
     width: 100%;
 }
 
-/* Consultas de medios para dispositivos móviles específicamente */
-@media (max-width: 600px) {
+/* Media queries para adaptar los estilos a diferentes tamaños de pantalla */
+
+/* Estilos para tablets y dispositivos de pantalla pequeña */
+@media (max-width: 768px) {
     header h1 {
         font-size: 2.5rem;
     }
@@ -157,5 +148,57 @@ footer {
     nav a {
         font-size: 0.9rem;
         padding: 8px;
+    }
+
+    .servicio {
+        width: 100%; /* Ajusta el ancho para que ocupe toda la pantalla */
+        padding: 15px;
+    }
+}
+
+/* Estilos para móviles */
+@media (max-width: 480px) {
+    header {
+        padding: 30px 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        padding: 5px;
+    }
+
+    nav a {
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    section.servicios, .contacto, .redes-sociales {
+        padding: 20px;
+    }
+
+    form {
+        padding: 15px;
+    }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 1024px) {
+    header {
+        padding: 60px 40px;
+    }
+
+    header h1 {
+        font-size: 3.5rem;
+    }
+
+    .servicio {
+        width: 30%; /* Ajusta los servicios para que se muestren en línea en pantallas grandes */
+    }
+
+    form {
+        max-width: 600px; /* Ajusta el ancho máximo del formulario */
     }
 }
