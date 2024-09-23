@@ -1,4 +1,4 @@
-/* Tipografía y colores básicos */
+/* Tipografía */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f9f9f9;
@@ -16,7 +16,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 3rem;
+    font-size: 3rem; /* Ajuste de tamaño para móviles */
     font-weight: 700;
 }
 
@@ -31,13 +31,14 @@ nav {
     display: flex;
     justify-content: center;
     padding: 15px;
+    flex-wrap: wrap; /* Asegura que los enlaces se ajusten en pantallas pequeñas */
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 15px 25px;
-    font-size: 1.2rem;
+    padding: 10px 15px; /* Ajuste para pantallas pequeñas */
+    font-size: 1rem; /* Tamaño reducido para móviles */
 }
 
 nav a:hover {
@@ -52,13 +53,13 @@ section.servicios {
 
 section.servicios h2 {
     margin-bottom: 30px;
-    font-size: 2.5rem;
+    font-size: 2rem; /* Ajuste de tamaño para móviles */
     color: #007BFF;
 }
 
 .servicio {
     display: inline-block;
-    width: 30%;
+    width: 100%; /* Ajuste para móviles */
     padding: 20px;
     margin: 10px;
     background-color: white;
@@ -78,7 +79,7 @@ section.servicios h2 {
 }
 
 form {
-    max-width: 600px;
+    max-width: 100%; /* Ajuste para pantallas pequeñas */
     margin: 0 auto;
     background-color: white;
     padding: 30px;
@@ -118,13 +119,13 @@ button:hover {
 
 .redes-sociales h2 {
     margin-bottom: 20px;
-    font-size: 2rem;
+    font-size: 1.8rem; /* Ajuste de tamaño para móviles */
     color: #007BFF;
 }
 
 .iconos a {
     color: #333;
-    font-size: 2rem;
+    font-size: 1.8rem; /* Tamaño ajustado para móviles */
     margin: 0 15px;
     transition: color 0.3s ease;
 }
@@ -142,45 +143,34 @@ footer {
     width: 100%;
 }
 
-/* Media Queries */
+/* Consultas de medios para diferentes tamaños de pantalla */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2.2rem;
-    }
-
-    .servicio {
-        width: 48%; /* Dos servicios por fila en vez de tres */
+        font-size: 2.5rem; /* Tamaño más pequeño para la cabecera en tablets y móviles */
     }
 
     nav a {
-        font-size: 1rem;
+        font-size: 1rem; /* Tamaño de fuente más pequeño para la navegación */
+        padding: 10px; /* Menos padding para enlaces */
+    }
+
+    section.servicios h2,
+    .redes-sociales h2 {
+        font-size: 1.6rem; /* Tamaño de fuente reducido para secciones */
+    }
+
+    .servicio {
+        width: 100%; /* Columnas completas en dispositivos más pequeños */
     }
 }
 
 @media (max-width: 480px) {
     header {
-        padding: 30px 10px;
+        padding: 40px 10px; /* Menos padding en la cabecera para dispositivos muy pequeños */
     }
 
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    .servicio {
-        width: 100%; /* Un servicio por fila */
-    }
-
-    form {
-        padding: 20px;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-
-    nav a {
-        padding: 10px;
-        text-align: center;
-        width: 100%;
+    header p,
+    .contacto p {
+        font-size: 1rem; /* Tamaño de texto reducido */
     }
 }
