@@ -1,222 +1,207 @@
-
-/* Tipografía */
-
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Evitar el desplazamiento horizontal */
-    min-height: 100vh; /* Asegura que el contenido siempre ocupe al menos el 100% de la altura de la pantalla */
-    flex-direction: column;
-}
+            margin: 0; /* Elimina el margen predeterminado */
+            font-family: 'Roboto', sans-serif; /* Aplica la fuente moderna globalmente */
+            padding: 0; /* Elimina el padding para evitar espacios innecesarios */
+            background-color: #E8E8E8; /* Color de fondo gris más claro */
+        }
+        .header {
+            background: linear-gradient(to right, #0077A3, #66ccff); /* Azul oscuro más claro a azul claro */
+            height: 160px; /* Aumenta la altura para dar más espacio */
+            display: flex;
+            flex-direction: column; /* Cambia la dirección a columna */
+            justify-content: center; /* Centra verticalmente el contenido */
+            align-items: center; /* Centra horizontalmente el contenido */
+            color: white; /* Color del texto */
+            width: 100%; /* Asegura que la barra cubra todo el ancho */
+        }
+        .header strong {
+            font-weight: 700; /* Negrita para el encabezado */
+            font-size: 30px; /* Tamaño de fuente más grande para el encabezado */
+            text-align: center; /* Asegura que el texto esté centrado */
+        }
+        .subheader {
+            font-family: 'Comfortaa', sans-serif; /* Aplica la fuente Comfortaa */
+            font-weight: 700; /* Fuente en negrita */
+            font-size: 18px; /* Tamaño de la fuente del texto inferior */
+            text-align: center; /* Centra el texto */
+            margin-top: 10px; /* Espaciado entre los textos */
+        }
+        .nav-bar {
+            background-color: #0077A3; /* Mismo tono azul oscuro */
+            display: flex;
+            justify-content: space-around; /* Distribuye el espacio entre las opciones */
+            align-items: center; /* Centra verticalmente el contenido */
+            height: 50px; /* Altura de la barra de navegación */
+            color: white; /* Color del texto */
+            width: 100%; /* Asegura que la barra cubra todo el ancho */
+        }
+        .nav-option {
+            font-weight: 400; /* Fuente delgada */
+            font-size: 16px; /* Tamaño de la fuente de las opciones */
+            cursor: pointer; /* Cambia el cursor al pasar sobre las opciones */
+        }
+        .nav-option a {
+            text-decoration: none; /* Elimina el subrayado */
+            color: white; /* Mantiene el color blanco del texto */
+        }
+        .services-bar {
+            background-color: #E8E8E8; /* Mismo color gris claro que el fondo de la página */
+            display: flex;
+            justify-content: center; /* Centra el contenido */
+            align-items: center; /* Centra verticalmente el contenido */
+            height: 50px; /* Altura de la barra de servicios */
+            width: 100%; /* Asegura que la barra cubra todo el ancho */
+        }
+        .services-title {
+            font-family: 'Roboto', sans-serif; /* Aplica la fuente Roboto a la barra de servicios */
+            font-weight: 700; /* Negrita para el título de servicios */
+            font-size: 32px; /* Aumenta el tamaño de la fuente para el título */
+            color: #0077A3; /* Color azul para el texto */
+            text-align: center; /* Centra el texto */
+            margin-top: 10px; /* Añade 10px de margen superior para moverlo hacia abajo */
+        }
+        .cards-container {
+            display: flex; /* Utiliza Flexbox para crear un diseño de columna */
+            flex-direction: column; /* Cambia a una sola columna */
+            align-items: center; /* Centra horizontalmente las tarjetas */
+            margin: 10px auto; /* Espaciado de 10px arriba y centrado */
+            width: calc(100% - 40px); /* Ancho total del contenedor menos márgenes */
+        }
 
-main {
-    flex: 1; /* Esto hará que el contenido principal ocupe el espacio restante, empujando el footer hacia abajo */
-}
 
-header {
-    background: linear-gradient(to right, #007BFF, #00BFFF);
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-}
 
-header h1 {
-    margin: 0;
-    font-weight: 700;
-}
-
-header p {
-    margin-top: 10px;
-    font-weight: 300;
-}
-
-nav {
-    background-color: #007BFF;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    flex-wrap: wrap;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-}
-
-nav a:hover {
-    background-color: #0056b3;
-    transition: background-color 0.3s ease;
-}
-
-section.servicios {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.servicio {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 10px auto; /* Asegura que el margen sea automático */
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    max-width: 300px; /* Limitar el ancho máximo de los servicios */
-}
-
-.servicio img {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
+/* Estilo para la sección de contacto */
 .contacto {
-    background-color: #f1f1f1;
-    padding: 40px;
-    text-align: center;
-}
-
-form {
-    max-width: 90%;
-    margin: 0 auto;
-    background-color: white;
+    background-color: #f9f9f9; /* Fondo claro */
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px 0;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
+.contacto h2 {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 24px;
+    color: #0077A3; /* Azul para el título */
     margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
 }
 
-button {
-    width: 100%;
+.contacto p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333; /* Texto oscuro */
+    margin-bottom: 20px;
+}
+
+.contacto form {
+    max-width: 400px; /* Ajuste de ancho máximo del formulario */
+    margin: 0 auto; /* Esto centrará el formulario horizontalmente */
+    text-align: left; /* Asegura que los elementos internos del formulario estén alineados a la izquierda */
+}
+
+.contacto label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contacto input,
+.contacto textarea {
+    width: 90%; /* Ajuste de ancho al 90% del contenedor */
     padding: 10px;
-    background-color: #007BFF;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centra los campos de entrada dentro del formulario */
+}
+
+.contacto button {
+    background-color: #0077A3;
     color: white;
+    padding: 10px 20px;
     border: none;
-    font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    display: block;
+    width: 100%; /* Hace que el botón también ocupe todo el ancho del formulario */
 }
 
-button:hover {
-    background-color: #0056b3;
-    transition: background-color 0.3s ease;
+.contacto button:hover {
+    background-color: #005f7f; /* Un azul más oscuro al hacer hover */
 }
 
-.redes-sociales {
-    text-align: center;
-    padding: 40px 20px;
-}
 
-.redes-sociales h2 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-}
 
-.iconos a {
-    color: #333;
-    font-size: 1.8rem;
-    margin: 0 15px;
-    transition: color 0.3s ease;
-}
 
-.iconos a:hover {
-    color: #007BFF;
-}
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    width: 100%; /* Asegura que ocupe todo el ancho */
-    height: 60px; /* Ajusta la altura según lo que necesites */
-    position: relative; /* Cambia a relative para que no se superponga */
-    clear: both; /* Asegura que esté por debajo de todo el contenido */
-}
-
-/* Media queries para adaptar los estilos a diferentes tamaños de pantalla */
-
-/* Estilos para tablets y dispositivos de pantalla pequeña */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5rem;
-    }
-
-    header p, .contacto p {
-        font-size: 1rem;
-    }
-
-    nav a {
-        font-size: 0.9rem;
-        padding: 8px;
-    }
-
-    .servicio {
-        width: 90%; /* Ajusta el ancho para que ocupe casi toda la pantalla */
-        padding: 15px;
-        margin: 10px auto; /* Centrar los servicios */
-    }
-}
-
-/* Estilos para móviles */
-@media (max-width: 480px) {
-    header {
-        padding: 30px 10px;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    nav {
-        padding: 5px;
-    }
-
-    nav a {
-        padding: 5px;
-        font-size: 0.8rem;
-    }
-
-    section.servicios, .contacto, .redes-sociales {
-        padding: 20px;
-    }
-
-    form {
-        padding: 15px;
-    }
-}
-
-/* Estilos para pantallas grandes */
-@media (min-width: 1024px) {
-    header {
-        padding: 60px 40px;
-    }
-
-    header h1 {
-        font-size: 3.5rem;
-    }
-
-    .servicio {
-        width: 30%; /* Ajusta los servicios para que se muestren en línea en pantallas grandes */
-    }
-
-    form {
-        max-width: 600px; /* Ajusta el ancho máximo del formulario */
-    }
-}
+        .card {
+            background-color: white; /* Color de fondo blanco para las tarjetas */
+            border: 2px solid black; /* Borde negro de 2px */
+            border-radius: 8px; /* Bordes redondeados */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            width: 100%; /* Ancho completo para las tarjetas */
+            margin: 10px 0; /* Margen vertical entre tarjetas */
+            padding: 0; /* Sin padding, la imagen ocupará todo el espacio */
+            box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+        }
+        .card img {
+            width: 100%; /* Ancho completo para la imagen */
+            height: 200px; /* Altura fija para la imagen */
+            object-fit: cover; /* Asegura que la imagen cubra todo el espacio */
+            border-top-left-radius: 8px; /* Bordes redondeados para la parte superior izquierda */
+            border-top-right-radius: 8px; /* Bordes redondeados para la parte superior derecha */
+        }
+        .card-title {
+            font-weight: 700; /* Negrita para el título de la tarjeta */
+            font-size: 18px; /* Tamaño del título */
+            margin: 10px; /* Espaciado alrededor del título */
+        }
+        .card-content {
+            font-size: 14px; /* Tamaño del contenido de la tarjeta */
+            margin: 10px; /* Espaciado alrededor del contenido */
+        }
+        /* Nueva barra debajo de los servicios */
+        .bottom-bar {
+            background-color: white; /* Color blanco para la barra */
+            display: flex;
+            flex-direction: column; /* Cambia a columna para centrar el texto */
+            justify-content: center; /* Centra el contenido */
+            align-items: center; /* Centra verticalmente el contenido */
+            height: 120px; /* Aumenta la altura de la barra */
+            width: 100%; /* Asegura que la barra cubra todo el ancho */
+        }
+        .bottom-bar-text {
+            font-family: 'Roboto', sans-serif; /* Aplica la fuente Roboto */
+            font-weight: 700; /* Negrita para el texto */
+            font-size: 26px; /* Aumenta el tamaño de la fuente */
+            color: #005B85; /* Color azul más oscuro para el texto */
+            text-align: center; /* Centra el texto */
+            margin-bottom: 10px; /* Espaciado debajo del texto */
+        }
+        /* Estilo para los íconos de redes sociales */
+        .social-icons {
+            display: flex; /* Utiliza Flexbox para centrar los íconos */
+            justify-content: center; /* Centra los íconos horizontalmente */
+            gap: 15px; /* Espacio entre los íconos */
+        }
+        .social-icons img {
+            width: 30px; /* Ancho de los íconos */
+            height: 30px; /* Alto de los íconos */
+        }
+        /* Estilo para el pie de página */
+        .footer {
+            background-color: white; /* Cambia el fondo a blanco */
+            text-align: center; /* Centra el texto */
+            padding: 10px 0; /* Espaciado vertical */
+            font-size: 14px; /* Tamaño de fuente */
+            color: #005B85; /* Color azul para el texto */
+            position: relative; /* Posición relativa para evitar que se superponga */
+            bottom: 0; /* Alinea al fondo */
+            width: 100%; /* Ancho completo */
+        }
